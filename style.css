@@ -1,0 +1,128 @@
+.topo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px rgba(0, 153, 204, 0.7);
+    background: rgba(227, 248, 255, 0.95);
+    background: linear-gradient(90deg, rgba(227, 248, 255, 0.95) 0%, rgba(196, 255, 220, 0.95) 50%, rgba(124, 233, 235, 0.95) 100%);
+    box-shadow: 0 4px 18px rgba(0, 153, 204, 0.15);
+    backdrop-filter: blur(40px);
+    width: 100%;
+    top: 0;
+    position: fixed;
+    
+}
+
+
+
+body {
+    font-family: "Roboto";
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+#logo img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    margin-left: 60px;
+}
+
+.ancoras{
+    word-spacing: 25px;
+    margin-right: 60px;
+    margin-top: 2px;   
+}
+
+.ancoras a{
+    text-decoration:none;
+    color: rgb(0, 153, 204);
+    transition: color 0.3s ease;
+}
+
+.ancoras a:hover {
+    color: #006eff;
+}
+
+.intro{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 65px;
+    margin-right: 45px;
+}
+.intro img{
+    margin-top: 70px;
+    border-radius: 25px;
+}
+
+.intro h1{
+    margin-left: 100px;
+    margin-top: 120px;
+    color: #00367c;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.intro p{
+    margin-left: 100px;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #00367c;
+    width: 560px;
+}
+
+.estrutura{
+    margin-top: 300px;
+    background-color: #00367c;
+    display: flex;
+    padding: 50px;
+    border-radius: 25px;
+
+}
+.estrutura h2{
+    color: #ffffff;
+    margin-left: 100px;
+   
+}
+.estrutura p{
+    margin-top: 20px;
+    margin-left: 100px;
+    color: #ffffff;
+    font-size: 17px;
+    
+    
+
+}
+.estrutura ul{
+    margin-top: 20px;
+    margin-left: 100px;
+    color: #ffffff;
+    font-size: 17px;
+    
+}
+
+.estrutura img{
+    width: 400px;
+    border-radius: 25px;
+    
+    
+    
+}
+.estrutura button{
+    width: 200px;
+    border-radius: 25px;
+    padding: 5px;
+    background: #006EFF;
+    background: linear-gradient(90deg,rgba(0, 110, 255, 1) 0%, rgba(14, 112, 232, 1) 50%, rgb(21, 72, 138) 100%);
+    color: #fff;
+    box-shadow: 5px 5px 10px 1px #000;
+    margin-bottom: 20px;
+    margin:auto;
+}
+
+    
