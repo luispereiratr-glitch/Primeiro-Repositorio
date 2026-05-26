@@ -4,26 +4,37 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: solid 1px rgba(0, 153, 204, 0.7);
-    background: rgba(227, 248, 255, 0.95);
-    background: linear-gradient(90deg, rgba(227, 248, 255, 0.95) 0%, rgba(196, 255, 220, 0.95) 50%, rgba(124, 233, 235, 0.95) 100%);
+    background: #e3f8fff2;
+    background: linear-gradient(90deg, #e3f8fff2 0%, #c4ffdcf2 50%, #7ce9ebf2 100%);
     box-shadow: 0 4px 18px rgba(0, 153, 204, 0.15);
     backdrop-filter: blur(40px);
     width: 100%;
     top: 0;
+    left: 0;
+    right: 0;
     position: fixed;
-    
+    padding: 0 25px;
+    z-index: 999;
+    min-height: 90px;
 }
 
-
+* {
+    box-sizing: border-box;
+}
 
 body {
     font-family: "Roboto";
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    padding-top: 90px;
 }
 
-
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
 #logo img {
     height: 80px;
@@ -33,9 +44,13 @@ body {
 }
 
 .ancoras{
-    word-spacing: 25px;
-    margin-right: 60px;
-    margin-top: 2px;   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    word-spacing: normal;
+    margin: 0;
+    padding: 0;
 }
 
 .ancoras a{
@@ -51,31 +66,43 @@ body {
 .intro{
     display: flex;
     justify-content: space-between;
-    margin-top: 65px;
-    margin-right: 45px;
+    align-items: center;
+    margin: 120px auto 0;
+    max-width: 1180px;
+    padding: 0 20px;
+    gap: 20px;
 }
+
+.intro-info{
+    max-width: 620px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
 .intro img{
-    margin-top: 70px;
     border-radius: 25px;
-    margin-left: 20px;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 6px 17px 1px;
+    max-width: 100%;
+    width: 460px;
+    height: auto;
+    object-fit: cover;
 }
 
 .intro h1{
-    margin-left: 30px;
-    margin-top: 120px;
+    margin: 0;
     color: #00367c;
     font-size: 40px;
     font-weight: 700;
 }
 
 .intro p{
-    margin-left: 30px;
-    margin-top: 10px;
+    margin: 0;
     font-size: 15px;
     font-weight: 400;
     color: #00367c;
-    width: 560px;
+    width: 100%;
+    max-width: 560px;
 }
 
 .estrutura{
@@ -111,25 +138,45 @@ body {
 
 .estrutura img{
     width: 450px;
+    max-width: 100%;
     border-radius: 25px;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 6px 17px 1px;
-    
-    
+    height: auto;
 }
-.estrutura button{
-    width: 200px;
+.button-link,
+.estrutura button,
+.trat-footer button{
+    width: 240px;
     border-radius: 25px;
-    padding: 5px;
-    background: #006EFF;
-    background: linear-gradient(90deg,rgba(0, 110, 255, 1) 0%, rgba(14, 112, 232, 1) 50%, rgb(21, 72, 138) 100%);
+    padding: 12px 20px;
+    background: linear-gradient(90deg, rgba(0, 110, 255, 1) 0%, rgba(14, 112, 232, 1) 50%, rgb(21, 72, 138) 100%);
     color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 6px 17px 1px;
-    margin-top: 25px;
-    margin-left: 120px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}
+.button-link:hover,
+.estrutura button:hover,
+.trat-footer button:hover{
+    transform: translateY(-2px);
+}
+.estrutura button,
+.button-link{
+    display: block;
+    margin: 25px auto 0;
 }
 .cliente{
     margin-top: 50px;
-    margin-left: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.estrutura .cliente img{
+    margin-bottom: 20px;
 }
 #destc{
     font-weight: bold;
@@ -146,16 +193,15 @@ body {
 
 .dentistas{
     margin-top: 125px;
-    
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    padding: 0 20px;
 }
 
 .dentexto h2{
     color: #00367c;
-    font-family: "Roboto";
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
     border-radius: 25px;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 6px 17px 1px;
     font-weight: bold;
@@ -170,46 +216,55 @@ body {
 
 
 
+.dentistas-images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 45px;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 10px;
+}
+
 .dentistas img{
-    margin-top: 80px;
-    width: 250px;
-    margin-left: 280px;
-    margin-bottom: 200px;
+    width: 320px;
+    max-width: 100%;
     border-radius: 25px;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 6px 17px 1px;
-    
  }
 
  .biog{
     color: #fff;
-    font-family: "Roboto";
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
     display: flex;
     flex-direction: column;
-    width: 350px;
+    width: 380px;
+    max-width: 100%;
     padding: 20px;
-    margin-left: 80px;
+    margin-left: 0;
     
  }
 
  .biogeral{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
     border: solid 2px #00367c;
     border-radius: 25px;
     background-color: #00367c;
     margin-bottom: 70px;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 6px 17px 1px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1100px;
  }
 
  #sorriso{
     color: #00367c;
-    font-family: "Roboto";
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     margin-bottom: 150px;
@@ -218,4 +273,447 @@ body {
     font-weight: bold;
     
  }
+.trat{
+    display: flex;
+    flex-direction: column;
+    margin-top: 110px;
+}
+.trat h2{
+    font-size: 25px;
+    font-weight: bolder;
+}
+.trat h3{
+    font-size: 20px;
+    font-weight: bolder;
+}
 
+#solu{
+    background-color: #00367c;
+    color: #fff;
+    border-radius: 25px;
+    width: auto;
+    max-width: 980px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 28px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 6px 17px 1px;
+}
+
+#soluc{
+    color: #006EFF;
+    margin-top: 25px;
+    font-size: 25px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 6px 17px 1px;
+    border-radius:25px ;
+    text-align: center;
+}
+.list{
+    color: #7e0b0b;
+}
+
+.trat{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 140px;
+    padding: 40px 40px 60px;
+    width: 100%;
+}
+.trat-header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    width: 100%;
+}
+.trat-intro{
+    width: 100%;
+    max-width: 620px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+}
+.trat-cover{
+    width: 100%;
+    max-width: 520px;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 30px;
+    height: auto;
+}
+.trat-card{
+    background-color: #00367c;
+    color: #ffffff;
+    border-radius: 25px;
+    padding: 30px;
+    max-width: 980px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 25px;
+}
+.trat-card h2{
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+.trat-card h3{
+    color: #82ccff;
+    margin-bottom: 18px;
+    font-weight: 500;
+}
+.trat-card .list{
+    margin-left: 0;
+    padding-left: 0;
+    list-style: none;
+    display: grid;
+    gap: 10px;
+    color: #d9efff;
+}
+.trat-card .list li::before{
+    content: "•";
+    color: #62bfff;
+    margin-right: 8px;
+}
+.trat-images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 980px;
+}
+.trat-box{
+    background-color: #e8f7ff;
+    border-radius: 25px;
+    padding: 20px;
+    width: 100%;
+    max-width: 460px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 8px 20px;
+    text-align: center;
+}
+.trat-box img{
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+.trat-box p{
+    color: #00367c;
+    font-size: 16px;
+    line-height: 1.6;
+}
+.trat-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.trat-footer button{
+    width: 240px;
+    border-radius: 25px;
+    padding: 12px 20px;
+    background: linear-gradient(90deg, rgba(0, 110, 255, 1) 0%, rgba(14, 112, 232, 1) 50%, rgb(21, 72, 138) 100%);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px;
+    transition: transform 0.2s ease;
+}
+.trat-footer button:hover{
+    transform: translateY(-2px);
+}
+#fim{
+    width: auto;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 25px 30px;
+}
+
+.contato{
+    margin-top: 140px;
+    padding: 40px 40px 20px;
+}
+.contato-intro{
+    max-width: 900px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+.contato-intro h1{
+    color: #00367c;
+    font-size: 38px;
+    margin-bottom: 14px;
+}
+.contato-intro p{
+    color: #00589c;
+    font-size: 17px;
+    line-height: 1.7;
+}
+.contato-grid{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.contato-card{
+    background: #e8f7ff;
+    border: 1px solid rgba(0, 102, 187, 0.16);
+    border-radius: 25px;
+    padding: 28px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 10px 25px;
+}
+.contato-card h2{
+    color: #00367c;
+    margin-bottom: 12px;
+}
+.contato-card p{
+    color: #00365f;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+.contato-card a{
+    color: #00367c;
+    text-decoration: none;
+    font-weight: 700;
+}
+.site-footer{
+    background: #00367c;
+    color: #ffffff;
+    padding: 30px 20px;
+    margin-top: 30px;
+}
+.footer-content{
+    max-width: 980px;
+    margin: 0 auto;
+    text-align: center;
+}
+.footer-content p{
+    margin: 6px 0;
+    color: #d7e8ff;
+}
+
+@media (max-width: 1200px) {
+    .topo {
+        padding: 15px 20px;
+    }
+    .ancoras {
+        word-spacing: 18px;
+        margin-right: 20px;
+    }
+    .intro {
+        margin-right: 20px;
+    }
+    .intro img {
+        width: 100%;
+        max-width: 380px;
+        margin-top: 40px;
+    }
+    .intro h1 {
+        font-size: 36px;
+        margin-top: 80px;
+    }
+    .intro p {
+        width: 100%;
+        margin-left: 0;
+    }
+    .estrutura h2,
+    .estrutura p,
+    .estrutura ul {
+        margin-left: 30px;
+    }
+    .estrutura ul {
+        width: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .topo {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+    #logo img {
+        margin-left: 0;
+    }
+    .ancoras {
+        word-spacing: 10px;
+        margin-right: 0;
+        justify-content: center;
+        gap: 12px;
+    }
+    .intro {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 130px;
+    }
+    .intro h1 {
+        margin-left: 0;
+        margin-top: 30px;
+        text-align: center;
+        font-size: 34px;
+    }
+    .intro p {
+        margin-left: 0;
+        margin-top: 20px;
+        width: 100%;
+        max-width: 720px;
+    }
+    .estrutura {
+        flex-direction: column;
+        padding: 30px 20px;
+        margin-top: 80px;
+    }
+    .estrutura h2,
+    .estrutura p,
+    .estrutura ul {
+        margin-left: 0;
+    }
+    .estrutura ul {
+        width: 100%;
+    }
+    .estrutura img {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 20px;
+    }
+    .estrutura button,
+    .button-link {
+        margin-left: 0;
+    }
+    .cliente {
+        margin-top: 30px;
+        margin-left: 0;
+    }
+    .dentistas {
+        margin-top: 145px;
+    }
+    .dentistas img {
+        margin-left: 0;
+        margin-top: 40px;
+        width: 100%;
+        max-width: 320px;
+    }
+    .biog {
+        width: 100%;
+        margin-left: 0;
+    }
+    .biogeral {
+        flex-direction: column;
+        align-items: center;
+    }
+    #sorriso {
+        width: auto;
+        margin-bottom: 80px;
+        padding: 20px;
+    }
+    .trat {
+        padding: 30px 20px 40px;
+        margin-top: 170px;
+    }
+    .trat-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .trat-cover {
+        width: 100%;
+        max-width: 560px;
+    }
+    .trat-card {
+        padding: 24px;
+    }
+    .trat-images {
+        flex-direction: column;
+    }
+    .trat-box {
+        width: 100%;
+        max-width: 100%;
+    }
+    .contato {
+        padding: 30px 20px 20px;
+        margin-top: 120px;
+    }
+    .contato-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .topo {
+        padding: 15px 10px;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    #logo img {
+        height: 65px;
+    }
+    .ancoras {
+        word-spacing: 8px;
+        margin-top: 5px;
+        width: 100%;
+        justify-content: center;
+        gap: 10px;
+    }
+    .intro h1 {
+        font-size: 30px;
+        margin-top: 20px;
+    }
+    .intro p {
+        font-size: 15px;
+    }
+    .estrutura {
+        padding: 25px 15px;
+    }
+    .estrutura h2,
+    .estrutura p,
+    .estrutura ul {
+        margin-left: 0;
+    }
+    .estrutura ul {
+        font-size: 15px;
+    }
+    .dentistas img {
+        max-width: 100%;
+    }
+    .dentexto h2 {
+        width: auto;
+        font-size: 30px;
+    }
+    .dentistas {
+        margin-top: 160px;
+    }
+    .biog {
+        padding: 18px;
+    }
+    .trat {
+        padding: 30px 15px 40px;
+    }
+    .trat-card {
+        padding: 22px;
+    }
+    .trat-box {
+        padding: 18px;
+    }
+    .contato-intro h1 {
+        font-size: 28px;
+    }
+    .contato-card {
+        padding: 22px;
+    }
+    .button-link,
+    .estrutura button,
+    .trat-footer button {
+        width: 100%;
+    }
+    .trat {
+        margin-top: 180px;
+    }
+    .site-footer {
+        padding: 25px 15px;
+    }
+}
